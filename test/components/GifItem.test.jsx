@@ -18,11 +18,13 @@ describe('Pruebas en <GifItem />', () => {
         const { src, alt } = screen.getByRole('img')
         expect( src ).toBe( url )
         expect( alt ).toBe( title )
-     })
+    })
 
-     test('debe mostrar el titulo como un String', () => { 
+    test('debe mostrar el titulo como un String', () => { 
         render( <GifItem title={title} url={url} />)
 
         expect( screen.getByText(title)).toBeTruthy()
-      })
+    })
+
+    
  })
